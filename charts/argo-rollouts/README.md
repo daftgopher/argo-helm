@@ -119,6 +119,7 @@ For full list of changes please check ArtifactHub [changelog].
 | controller.pdb.labels | object | `{}` | Labels to be added to controller [Pod Disruption Budget] |
 | controller.pdb.maxUnavailable | string | `nil` | Maximum number / percentage of pods that may be made unavailable |
 | controller.pdb.minAvailable | string | `nil` | Minimum number / percentage of pods that should remain scheduled |
+| controller.pdb.unhealthyPodEvictionPolicy | string | `nil` | Set the unhealthyPodEvictionPolicy (one of: `IfHealthyBudget`, `AlwaysAllow`) If not set, corresponds to IfHealthyBudget policy |
 | controller.podAnnotations | object | `{}` | Annotations to be added to application controller pods |
 | controller.podLabels | object | `{}` | Labels to be added to the application controller pods |
 | controller.priorityClassName | string | `""` | [priorityClassName] for the controller |

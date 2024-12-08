@@ -195,6 +195,9 @@ controller:
     minAvailable: # 1
     # -- Maximum number / percentage of pods that may be made unavailable
     maxUnavailable: # 0
+    # -- Set the unhealthyPodEvictionPolicy (one of: `IfHealthyBudget`, `AlwaysAllow`)
+    # If not set, corresponds to IfHealthyBudget policy
+    unhealthyPodEvictionPolicy: # IfHealthyBudget
 
   # -- Additional volumes to add to the controller pod
   volumes: []

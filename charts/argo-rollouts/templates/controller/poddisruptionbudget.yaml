@@ -21,6 +21,9 @@ spec:
   {{- else }}
   minAvailable: 0
   {{- end }}
+  {{- if .Values.controller.pdb.unhealthyPodEvictionPolicy }}
+  unhealthyPodEvictionPolicy: {{ .Values.controller.pdb.unhealthyPodEvictionPolicy }}
+  {{- end }}
   selector:
     matchLabels:
       {{- include "argo-rollouts.selectorLabels" . | nindent 6 }}
